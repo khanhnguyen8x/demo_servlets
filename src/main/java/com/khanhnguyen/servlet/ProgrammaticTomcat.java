@@ -30,7 +30,7 @@ public class ProgrammaticTomcat {
 
         servletClass = ProductServlet.class;
         Tomcat.addServlet(context, servletClass.getSimpleName(), servletClass.getName());
-        context.addServletMappingDecoded("/*", servletClass.getSimpleName());
+        context.addServletMappingDecoded("/product/*", servletClass.getSimpleName());
 
         tomcat.start();
         tomcat.getServer().await();
@@ -53,7 +53,7 @@ public class ProgrammaticTomcat {
 
         servletClass = ProductServlet.class;
         Tomcat.addServlet(context, servletClass.getSimpleName(), servletClass.getName());
-        context.addServletMappingDecoded("/*", servletClass.getSimpleName());
+        context.addServletMappingDecoded("/product/*", servletClass.getSimpleName());
 
         // add a filter and filterMapping
         Class filterClass = ProductFilter.class;
